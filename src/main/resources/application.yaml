@@ -5,6 +5,10 @@ spring:
     password: 1111
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  mustache:
+    servlet:
+      expose-request-attributes: true
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,3 +23,8 @@ logging:
   level:
     org.hibernate.SQL: debug
     org.hibernate.orm.jdbc.bind: trace
+
+server:
+  servlet:
+    session:
+      timeout: 90m
